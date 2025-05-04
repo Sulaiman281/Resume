@@ -11,7 +11,7 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #f9f9fc;
+            background-color: #f5f7fa;
             color: #333;
         }
 
@@ -22,14 +22,15 @@
             background: #fff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            margin-top: 30px;
+            margin-top: 10px;
             box-sizing: border-box;
+            border-top: 5px solid #0066cc;
         }
 
         header, footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #0066cc;
+            background: linear-gradient(to right, #0066cc, #0099ff);
             color: #fff;
         }
 
@@ -71,15 +72,16 @@
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .section h3 {
             margin-bottom: 15px;
-            font-size: 18px;
+            font-size: 19px;
             color: #0066cc;
             border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            margin-top: 25px;
         }
 
         ul {
@@ -88,7 +90,17 @@
         }
 
         ul li {
-            margin: 8px 0;
+            position: relative;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        ul li:before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         ul li strong {
@@ -112,13 +124,84 @@
             font-size: 14px;
             color: #555;
         }
+
+        /* Project links styling */
+        .project-link {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 13px;
+            color: #0066cc;
+            transition: all 0.3s ease;
+        }
+    
+        .project-link:hover {
+            color: #004c99;
+        }
+    
+        /* Achievement categories styling */
+        .achievement-category {
+            margin-bottom: 15px;
+        }
+    
+        .achievement-category h4 {
+            color: #444;
+            margin: 10px 0 5px 0;
+            font-size: 16px;
+            border-left: 3px solid #0066cc;
+            padding-left: 10px;
+        }
+
+        @media print {
+            body {
+                line-height: 1.4; /* Reduced from 1.8 */
+                font-size: 11pt; /* Slightly smaller font */
+            }
+            
+            .container {
+                box-shadow: none;
+                width: 100%;
+                margin: 0;
+                padding: 10px; /* Reduced padding */
+            }
+            
+            .project-link {
+                display: none; /* Hide links in printed version */
+            }
+            
+            .section {
+                margin-bottom: 10px; /* Reduced spacing between sections */
+                page-break-inside: avoid; /* Avoid breaking within sections */
+                /* Allow breaking within sections if needed */
+            }
+            
+            ul li {
+                margin: 3px 0; /* Reduce spacing between list items */
+            }
+            
+            .contact-info {
+                margin-bottom: 15px; /* Reduced from 30px */
+            }
+            
+            img {
+                width: 100px !important; /* Smaller profile picture */
+                height: 100px !important;
+            }
+            
+            .achievement-category {
+                margin-bottom: 8px; /* Reduced margin */
+            }
+            
+            .grid {
+                gap: 10px; /* Reduced grid gap */
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>Syed Suleman Shah</h1>
-    </header>
+    </header> -->
     <div class="container">
         <div class="contact-info" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: left;">
             <div style="flex: 1; min-width: 150px; text-align: center;">
@@ -126,31 +209,29 @@
             <h1 style="font-size: 20px; margin: 10px 0;">Syed Suleman Shah</h1>
             </div>
             <div style="flex: 2; min-width: 300px; padding-left: 20px;">
-            <p><strong>Address:</strong> Bilal Town Near Shamsi Society | Karachi, Sindh</p>
-            <p><strong>Phone:</strong> +92-03093023289</p>
+            <!-- <p><strong>Address:</strong> Bilal Town Near Shamsi Society | Karachi, Sindh</p> -->
+            <p><strong>Phone:</strong> +923093023289</p>
             <p><strong>Email:</strong> <a href="mailto:sayedsulaiman607@gmail.com" style="color: #0066cc; text-decoration: none;">sayedsulaiman607@gmail.com</a></p>
             <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/syed-suleman-shah" target="_blank" style="color: #0066cc; text-decoration: none;">www.linkedin.com/in/syed-suleman-shah</a></p>
             <p><strong>Portfolio:</strong> <a href="https://www.witshells.com" target="_blank" style="color: #0066cc; text-decoration: none;">www.witshells.com</a></p>
             <p><strong>GitHub:</strong> <a href="https://github.com/Sulaiman281" target="_blank" style="color: #0066cc; text-decoration: none;">github.com/Sulaiman281</a></p>
             </div>
         </div>
-        <div class="section">
+        <!-- <div class="section">
             <h3>Job Role</h3>
             <p>Unity Game Developer | Backend Developer | Game Development Instructor</p>
-        </div>
+        </div> -->
         <div class="section">
             <h3>Professional Summary</h3>
-            <p>Results-driven Unity Game Developer with expertise in 3D game development, multiplayer systems, and educational projects. Proven ability to deliver scalable backend solutions using ASP.NET. Adept at teaching Unity game development and mentoring aspiring developers. Passionate about creating immersive gaming experiences that combine creativity and technical excellence.</p>
+            <p>Passionate Unity Game Developer with over 5 years of hands-on experience bringing immersive 3D worlds to life across VR, mobile, and multiplayer platforms. I've successfully delivered more than 20 commercial gaming projects where I've balanced creative vision with technical optimization to create engaging player experiences. My background combines Unity expertise with strong ASP.NET backend development skills, allowing me to bridge the gap between compelling gameplay and robust server architecture. I thrive on exploring cutting-edge technologies to craft next-generation gaming experiences that captivate users and deliver measurable business results.</p>
         </div>
         <div class="section">
             <h3>Technical Skills</h3>
             <ul>
-                <li><strong>Game Development:</strong> Unity 3D, Animation Rigging, NetCode, ECS</li>
-                <li><strong>Backend Development:</strong> ASP.NET REST API, Microservices</li>
-                <li><strong>Version Control & Deployment:</strong> Git, Docker, AWS</li>
-                <li><strong>Tools:</strong> Blender (Game Optimization), VSCode</li>
-                <li><strong>Platforms:</strong> VR Development, Mobile Game Development</li>
-                <li><strong>Teaching:</strong> Unity 3D Game Development</li>
+                <li><strong>Game Development:</strong> Unity 3D (C#), Animation Rigging, NetCode, ECS, DOTS, Blender (Game Optimization)</li>
+                <li><strong>Backend Development:</strong> ASP.NET Core, REST API, Microservices, SQL, NoSQL, WebSockets</li>
+                <li><strong>Version Control & Deployment:</strong> Git, CI/CD, Docker, AWS, Azure</li>
+                <li><strong>Platforms:</strong> VR Development (Oculus/Meta Quest), Mobile Game Development (iOS/Android), Backend Development</li>
             </ul>
         </div>
         <div class="section">
@@ -177,35 +258,59 @@
             </div>
         </div>
         <div class="section">
-            <h3>Projects</h3>
+            <h3>Featured Projects</h3>
             <ul>
-                <li><strong>Character Customization System:</strong> Built a dynamic character customization system in Unity with advanced blendshape features.</li>
-                <li><strong>Escape Room VR:</strong> Designed a VR escape room game with immersive puzzles and mechanics.</li>
-                <li><strong>I'm Surelock - VR Detective Game:</strong> Developed a story-driven VR detective game with engaging levels and mechanics.</li>
-                <li><strong>VR Engager Game:</strong> Created a VR app for presentation practice, integrating AI speech recognition for feedback.</li>
-                <li><strong>Chess Game with Backend Solution:</strong> Developed a multiplayer chess game with ASP.NET WebSockets, featuring real-time interactions and custom army creation.</li>
+                <li>
+                    <strong>Character Customization System:</strong> Built a dynamic character customization system in Unity with advanced blendshape features.
+                    <a href="https://www.linkedin.com/in/syed-suleman-shah/detail/recent-activity/shares/" target="_blank" class="project-link">[View on LinkedIn]</a>
+                </li>
+                <li>
+                    <strong>Escape Room VR:</strong> Designed a VR escape room game with immersive puzzles and mechanics.
+                    <a href="https://www.linkedin.com/in/syed-suleman-shah/detail/recent-activity/shares/" target="_blank" class="project-link">[View on LinkedIn]</a>
+                </li>
+                <li>
+                    <strong>I'm Surelock - VR Detective Game:</strong> Developed a story-driven VR detective game with engaging levels and mechanics.
+                    <a href="https://www.linkedin.com/in/syed-suleman-shah/detail/recent-activity/shares/" target="_blank" class="project-link">[View on LinkedIn]</a>
+                </li>
+                <li>
+                    <strong>VR Engager Game:</strong> Created a VR app for presentation practice, integrating AI speech recognition for feedback.
+                    <a href="https://www.linkedin.com/in/syed-suleman-shah/detail/recent-activity/shares/" target="_blank" class="project-link">[View on LinkedIn]</a>
+                </li>
+                <li>
+                    <strong>Chess Game with Backend Solution:</strong> Developed a multiplayer chess game with ASP.NET WebSockets, featuring real-time interactions and custom army creation.
+                    <a href="https://www.linkedin.com/in/syed-suleman-shah/detail/recent-activity/shares/" target="_blank" class="project-link">[View on LinkedIn]</a>
+                </li>
             </ul>
+            <p>For further projects you can visit my <a href="https://www.witshells.com" target="_blank" style="color: #0066cc; text-decoration: none;">portfolio</a>.</p>
         </div>
         <div class="section">
             <h3>Education</h3>
             <p><strong>BS Software Engineering</strong> | University of Sindh, Jamshoro</p>
             <p>2019 – 2022</p>
-            <ul>
-                <li>First position in Final Year Project competition for developing a Unity 3D game with GTA-style mechanics.</li>
-            </ul>
         </div>
         <div class="section">
             <h3>Achievements</h3>
-            <ul>
-                <li>Consistently earned 5-star ratings on Fiverr and Upwork for exceptional project delivery.</li>
-                <li>Built a strong reputation for professionalism and creativity, leading to repeat business.</li>
-                <li>Recognized for exceeding client expectations and delivering high-quality results.</li>
-            </ul>
+            
+            <div class="achievement-category">
+                <h4>Academic Excellence</h4>
+                <ul>
+                    <li>First position in Final Year Project competition for developing a Unity 3D game with GTA-style mechanics.</li>
+                </ul>
+            </div>
+            
+            <div class="achievement-category">
+                <h4>Professional Recognition</h4>
+                <ul>
+                    <li>Consistently earned 5-star ratings on Fiverr and Upwork for exceptional project delivery.</li>
+                    <li>Built a strong reputation for professionalism and creativity, leading to repeat business.</li>
+                    <li>Recognized for exceeding client expectations and delivering high-quality results.</li>
+                </ul>
+            </div>
         </div>
     </div>
-    <footer>
-        <p>© 2023 Syed Suleman Shah. All Rights Reserved.</p>
-    </footer>
+    <!-- <footer>
+        <p>© 2025 Syed Suleman Shah. All Rights Reserved.</p>
+    </footer> -->
 </body>
 
 </html>
