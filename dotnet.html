@@ -30,13 +30,13 @@
             background: var(--bg-light);
             color: var(--text-light);
             transition: background 0.3s, color 0.3s;
+            font-size: 15px;
         }
 
         .container {
-            width: 95vw;
-            max-width: 800px;
-            margin: 24px auto;
-            padding: 24px;
+            max-width: 850px;
+            margin: 18px auto;
+            padding: 18px 18px 10px 18px;
             background: var(--section-bg-light);
             border-radius: 8px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
@@ -46,59 +46,75 @@
 
         .contact-info {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
 
         .contact-info img {
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            margin-right: 24px;
+            margin-right: 18px;
         }
 
         .contact-details {
-            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            font-size: 1.15em;
+        }
+
+        .contact-details-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 2px;
         }
 
         .contact-details h1 {
             font-size: 22px;
-            margin: 0 0 4px 0;
+            margin: 0 18px 0 0;
             color: var(--accent);
         }
 
-        .contact-details p,
+        .contact-details p {
+            margin: 0 10px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         .contact-details a {
-            font-size: 13px;
-            color: inherit;
-            margin: 4px 0;
+            color: var(--accent);
             text-decoration: none;
         }
 
         .section {
-            margin-bottom: 18px;
+            margin-bottom: 12px;
             background: transparent;
         }
 
         .section h3 {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--accent);
             border-bottom: 1px solid var(--border-light);
-            padding-bottom: 4px;
-            margin-bottom: 8px;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+            margin-top: 0;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         ul li {
             position: relative;
-            padding-left: 16px;
-            margin: 6px 0;
+            padding-left: 14px;
+            margin: 4px 0;
             font-size: 13px;
         }
 
@@ -112,8 +128,8 @@
 
         .grid {
             display: grid;
-            /* grid-template-columns: 1fr 1fr; */
-            gap: 14px;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
 
         .grid>div {
@@ -127,7 +143,7 @@
         }
 
         .grid p {
-            margin: 3px 0 6px 0;
+            margin: 2px 0 4px 0;
             font-size: 13px;
             color: #555;
         }
@@ -135,6 +151,17 @@
         @media (max-width: 700px) {
             .container {
                 padding: 8px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
             }
 
             .grid {
@@ -179,44 +206,39 @@
 
 <body>
     <div class="container">
-        <div class="contact-info"
-            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 18px;">
-            <img src="./profile_pic.png" alt="Profile Picture"
-                style="width: 140px; height: 140px; border-radius: 50%; margin-right: 24px;">
-            <div style="flex: 1;">
-                <h1 style="font-size: 22px; color: var(--accent); margin: 0 0 100px 0;">Syed Suleman Shah</h1>
-            </div>
-            <div class="contact-details" style="min-width: 320px; font-size: 1.1em; text-align: left;">
-                <p style="margin: 4px 0;"><strong>Phone:</strong> <a href="tel:+923093023289"
-                        target="_blank">+923093023289</a></p>
-                <p style="margin: 4px 0;"><strong>Email:</strong> <a href="mailto:sayedsulaiman607@gmail.com"
-                        target="_blank">sayedsulaiman607@gmail.com</a></p>
-                <p style="margin: 4px 0;"><strong>LinkedIn:</strong> <a
-                        href="https://www.linkedin.com/in/syed-suleman-shah"
-                        target="_blank">www.linkedin.com/in/syed-suleman-shah</a></p>
-                <p style="margin: 4px 0;"><strong>Portfolio:</strong> <a href="https://www.witshells.com"
-                        target="_blank">www.witshells.com</a></p>
-                <p style="margin: 4px 0;"><strong>GitHub:</strong> <a href="https://github.com/Sulaiman281"
-                        target="_blank">github.com/Sulaiman281</a></p>
-                <p style="margin: 4px 0;"><strong>Location:</strong> Karachi, Pakistan</p>
+        <div class="contact-info">
+            <img src="./profile_pic.png" alt="Profile Picture">
+            <div class="contact-details">
+                <h1>Syed Suleman Shah</h1>
+                <div class="contact-details-row">
+                    <p><strong>Phone:</strong> <a href="tel:+923093023289" target="_blank">+923093023289</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:sayedsulaiman607@gmail.com"
+                            target="_blank">sayedsulaiman607@gmail.com</a></p>
+                </div>
+                <div class="contact-details-row">
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/syed-suleman-shah"
+                            target="_blank">linkedin.com/in/syed-suleman-shah</a></p>
+                    <p><strong>Portfolio:</strong> <a href="https://www.witshells.com" target="_blank">witshells.com</a>
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="section">
-            <h3>Professional Summary</h3>
+            <h3>Summary</h3>
             <p>
-                Experienced .NET and C# developer with a proven track record in designing, developing, and deploying
-                scalable backend systems and modern web applications. Strong expertise in Unity C# since 2021, REST
-                APIs, WebSockets, and multiplayer game logic. Adept at both backend and frontend development, with
-                hands-on experience in PostgreSQL, MongoDB, Docker, AWS, and frontend frameworks. Known for delivering
-                robust business logic, secure authentication, and seamless deployments. Ready to bring deep technical
-                skills and a proactive, problem-solving mindset to a .NET Developer or Full Stack Developer role.
+                Dynamic Backend & Unity Developer with 4 years of experience, specialising in crafting scalable
+                solutions that enhance user engagement and streamline business processes. Expertise in C# and .NET
+                technologies, adept at designing and deploying secure REST APIs and backend systems tailored for
+                high-performance applications. Proven ability to integrate frontend features seamlessly, utilising
+                modern frameworks such as React and Bootstrap. Committed to optimising development workflows through
+                effective use of Docker and AWS, ensuring robust and maintainable software solutions.
             </p>
         </div>
 
         <div class="section">
             <h3>Technical Skills</h3>
-            <ul>
+            <ul style="columns:2; -webkit-columns:2; -moz-columns:2;">
                 <li><strong>Languages:</strong> C#, .NET, JavaScript</li>
                 <li><strong>Backend:</strong> ASP.NET Core, REST APIs, WebSockets, Entity Framework, JWT Auth,
                     Microservices</li>
@@ -229,14 +251,14 @@
         </div>
 
         <div class="section">
-            <h3>Professional Experience</h3>
+            <h3>Experience</h3>
             <div class="grid">
                 <div>
                     <h4>Backend & Unity Developer (Freelance)</h4>
                     <p>2021 – Present</p>
                     <ul>
-                        <li>Developed multiplayer Unity games (e.g., Chess, Racing) with custom matchmaking, ELO, and
-                            real-time WebSocket servers using C# and PostgreSQL.</li>
+                        <li>Developed multiplayer Unity games (Chess, WheelToWin Racing) with custom matchmaking, ELO,
+                            and real-time WebSocket servers using C# and PostgreSQL.</li>
                         <li>Designed and deployed REST APIs for Orbaic and Aldeer, implementing custom JWT
                             authentication, business logic, referral systems, and AWS deployment with Docker.</li>
                         <li>Built scalable backend systems for gaming and business apps, focusing on security,
@@ -261,16 +283,14 @@
                 </li>
                 <li>
                     <strong>WheelToWin Racing Game Backend:</strong> .NET REST API for racing game, handling business
-                    logic, user
-                    authentication, email, referral, and multiplayer matchmaking.
+                    logic, user authentication, email, referral, and multiplayer matchmaking.
                 </li>
             </ul>
         </div>
 
         <div class="section">
             <h3>Education</h3>
-            <p><strong>BS Software Engineering</strong> | University of Sindh, Jamshoro</p>
-            <p>2019 – 2022</p>
+            <p><strong>BS Software Engineering</strong> | University of Sindh, Jamshoro | 2019 – 2022</p>
         </div>
 
         <div class="section">
